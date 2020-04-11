@@ -37,12 +37,14 @@ function createFeatures(earthquakeData) {
             layer.bindPopup("<h3>" + feature.properties.place +
                 "</h3><hr><p>" + new Date(feature.properties.time) + "</p>" + "<p> Magnitude: " + feature.properties.mag + "</p>")
         },
+
+
         pointToLayer: function(feature, latlng) {
             return new L.circle(latlng, {
                 radius: markerSize(feature.properties.mag),
                 fillColor: markerColor(feature.properties.mag),
                 fillOpacity: 1,
-                stroke: false,
+                stroke: true, // stroke is for outline of circle
             })
         }
     });

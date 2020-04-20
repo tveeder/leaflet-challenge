@@ -1,3 +1,3 @@
 # leaflet-challenge
 
-![] earthquakes.PNG
+![](leaflet-step-1/earthquakes.PNG)
